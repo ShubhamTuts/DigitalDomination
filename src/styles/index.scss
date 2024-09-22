@@ -7,3 +7,181 @@
 @import "~bootstrap/scss/bootstrap";
 @import "swiper/css/bundle"; 
 @import "/public/assets/scss/main.scss";
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  /* Dark Theme */
+  [data-theme="dark"] {
+    --background-color: #000000;
+    --text-color: #ffffff;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  /* The Header container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* The On/Off switch container */
+  .onOffSwitch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+  }
+  
+  .onOffSwitch input {
+    display: none;
+  }
+  
+  /* The switch itself */
+  .switchLabel {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    padding: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    position: relative;
+  }
+  
+  .switchLabel .onText,
+  .switchLabel .offText {
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .onText {
+    left: 12px;
+  }
+  
+  .offText {
+    right: 12px;
+  }
+  
+  /* The moving switch button */
+  .switchButton {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  input:checked + .switchLabel {
+    background-color: #4caf50;
+  }
+  
+  input:checked + .switchLabel .switchButton {
+    transform: translateX(56px); /* Moves the switch button to the "On" side */
+  }
+  
+  input:checked + .switchLabel .onText {
+    color: white;
+  }
+  
+  input:not(:checked) + .switchLabel .offText {
+    color: white;
+  }
+
+  .headerStyle{
+    background: #000000;
+  }
+  .hero-dark {
+    background-color: black;
+    color: white;
+}
+
+.hero-light {
+    background-color: white;
+    color: black;
+}
+
+/* Optional: Customize other elements like buttons */
+.tp-btn-dark {
+    background-color: #444;
+    color: white;
+}
+
+.tp-btn-light {
+    border-color: black;
+    color: black;
+}
+/* Hero area styles */
+.hero-dark {
+    background-color: black !important;  /* Force background to black */
+    color: white !important;  /* Ensure text is white */
+}
+
+.hero-light {
+    background-color: white !important;  /* Force background to white */
+    color: black !important;  /* Ensure text is black */
+}
+
+/* Optional: Remove the gradient background for dark mode */
+.hero-dark .tp-hero-gradient-bg {
+    display: none;  /* Hide the gradient in dark mode */
+}
+
+/* Button styles for different themes */
+.tp-btn-dark {
+    background-color: #444;
+    color: white;
+}
+
+.tp-btn-light {
+    border-color: black;
+    color: black;
+}
+.counter-dark {
+  color: white !important; /* Ensure text is white */
+}
+
+.counter-dark h4 {
+  color: white !important; /* Ensure h4 elements are white */
+}
+
+.counter-dark p {
+  color: white !important; /* Ensure paragraph text is white */
+}
+.dark-text {
+  color: white;
+}
+
+
+/* Dark theme styles */
+
+.footer-bottom-content {
+  padding: 20px; /* Adjust as needed */
+  color: inherit; /* Ensure text color inherits from parent styles */
+}
+
+/* If you have specific styles for dark/light themes */
+.footer-bottom-content.dark {
+  background-color: #000; /* dark theme background */
+  color: #fff; /* dark theme text */
+}
+
+.footer-bottom-content.light {
+  background-color: #fff; /* light theme background */
+  color: #000; /* light theme text */
+}

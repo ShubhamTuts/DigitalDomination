@@ -56,45 +56,45 @@ const testimonial_data = [
     {
         id: 1, 
         img: testimonial_img_1, 
-        name: "Rudra Ghosh",
-        job_title: "Founder & CEO Dulalix",
-        description: <>We get absolutely raving reviews 
-        from our sales and customer support 
-        teams using close. Even our co-
-        founders are very happy.</>,
+        name: "Stacy Stubblefield",
+        // job_title: "Founder & CEO Dulalix",
+        description: <>Biswajit has been excellent to work with! He's extremely detail oriented and hard working and has helped our company immensely. He takes the time to deeply understand the projects he's working on and gives great feedback and advice on the projects. He's also extremely skilled and is an expert in his domain. Anyone would be lucky to work with Biswajit!</>,
 
     },
     {
         id: 2, 
         img: testimonial_img_2, 
-        name: "Rudra Ghosh",
-        job_title: "Founder & CEO Dulalix",
-        description: <>We get absolutely raving reviews 
-        from our sales and customer support 
-        teams using close. Even our co-
-        founders are very happy.</>,
+        name: "Laura Thain",
+        // job_title: "Founder & CEO Dulalix",
+        description: <>I hired Biswajit to set up my ESP’s and DNS records to ensure that everything was set right for highest email deliverability for effective marketing campaigns and customer nurture sequences.
+
+        He was extremely fast, attentive and patient with my queries and I felt very safe handing him the keys to do what he does best. An area in which I know very little, yet he left me more educated than before.
+        
+        Highly recommend him for your digital marketing needs.</>,
 
     },
     {
         id: 3, 
         img: testimonial_img_3, 
-        name: "Rudra Ghosh",
-        job_title: "Founder & CEO Dulalix",
-        description: <>“ Digital Domination  helps me keep a clean,
-        organized ledger that I can access
-        anywhere. The UI is so intuitive that
-        anyone can use it,</>,
+        name: "Adam Simpson",
+        // job_title: "Founder & CEO Dulalix",
+        description: <>Biswajit is an expert at lead generation and cold email. I can highly recommend him and his team to anyone in need, thank you so much.</>,
 
     },
     {
         id: 4, 
         img: testimonial_img_4, 
-        name: "Rudra Ghosh",
+        name: "Dabia Belote",
         job_title: "Founder & CEO Dulalix",
-        description: <>We get absolutely raving reviews 
-        from our sales and customer support 
-        teams using close. Even our co-
-        founders are very happy.</>,
+        description: <>Biswajit did everything well. He setup my emailing system properly and it's working efficiently. He also did not milk the clock but did everything in a timely professional manner, I would call it a top of the line service at an affordable price. I would diffidently reorder with Biswajit again and again for his expertise and professionalism, and the most important of all, he gets the job done right! I would highly recommend his service to anyone</>,
+
+    },
+    {
+        id: 4, 
+        img: testimonial_img_4, 
+        name: "Roshan Jonah",
+        job_title: "Founder & CEO Dulalix",
+        description: <>You can't find a more skillful person to work with than Biswajit. He is a rare find, and we will continue working with him for a long time to come. He is fast, efficient, a great communicator, and most of all, gets the job done. If he doesn't find the answer, he will look up and educates himself to get the job done. Highly recommended.</>,
 
     },
 ]

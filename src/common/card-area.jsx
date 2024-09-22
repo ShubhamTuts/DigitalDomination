@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -7,8 +7,8 @@ import card_img_2 from "../../public/assets/img/card/card-shape-1.png";
 import card_img_3 from "../../public/assets/img/card/card-img-1.png";
 import card_img_4 from "../../public/assets/img/card/card-img-2.png";
 import card_img_5 from "../../public/assets/img/card/card-img-3.png";
-import card_img_6 from "../../public/assets/img/card/card-img-4.png" ;
-
+import card_img_6 from "../../public/assets/img/card/card-img-4.png";
+import { ThemeContext } from '@/context/ThemeContext';
 
 const card_content = {
     card_images: [
@@ -55,41 +55,46 @@ const card_content = {
     to selling digital products. It’s easy to get started and they <br />
     can be extremely profitable</>,
     btn_text: "Get Started Free"
-}
-const {card_images, title, description, btn_text}  = card_content
+};
 
+const { card_images, title, description, btn_text } = card_content;
 
-
-const CardArea = ({style_service}) => {
+const CardArea = ({ style_service }) => {
+    const { theme } = useContext(ThemeContext);
     return (
         <>
-        <div className="tp-card-area tp-card-space pt-175 pb-185">
-               <div className="container">
-                  <div className="row">
-                     <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".5s">
-                        <div className="tp-card-thumb-wrapper p-relative">
-                            {card_images.map((item, i)  => 
-                                <div key={i} className={`tp-card-${item.cls}`} data-parallax={item.data_parallax}>
-                                    <Image src={item.img} alt="theme-pure" />
-                                </div>
-                            )} 
+            <div className="tp-card-area tp-card-space pt-175 pb-185">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".5s">
+                            <div className="tp-card-thumb-wrapper p-relative">
+                                {card_images.map((item, i) => 
+                                    <div key={i} className={`tp-card-${item.cls}`} data-parallax={item.data_parallax}>
+                                        <Image src={item.img} alt="theme-pure" />
+                                    </div>
+                                )}
+                            </div>
                         </div>
-                     </div>
-                     <div className="col-xl-6 col-lg-6 wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s">
-                        <div className="tp-card-title-box">
-                           <h3 className="tp-section-title-3 pb-15">{title}</h3>
-                           <p className="">{description}</p>
-                              <Link className={`${style_service ? "tp-btn-inner" : "tp-btn-blue-lg"} tp-btn-hover alt-color-black`} 
-                                 href="/">
-                                 <span>{btn_text}</span> 
-                                 <b></b>
-                              </Link>
+                        <div className="col-xl-6 col-lg-6 wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s">
+                            <div className="tp-card-title-box">
+                                <h3 className={`tp-section-title-3 pb-15 ${theme === 'dark' ? 'dark-text' : ''}`}>{title}</h3>
+                                <p className={`${theme === 'dark' ? 'dark-text' : ''}`}>{description}</p>
+                                <Link className={`${style_service ? "tp-btn-inner" : "tp-btn-blue-lg"} tp-btn-hover alt-color-black`} 
+                                    href="/">
+                                    <span>{btn_text}</span>
+                                    <b></b>
+                                </Link>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
             
+            <style jsx>{`
+                .dark-text {
+                    color: white;
+                }
+            `}</style>
         </>
     );
 };
